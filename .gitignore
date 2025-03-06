@@ -1,0 +1,16 @@
+*.so
+*.pyc
+target
+venv
+.venv
+*.so
+*.dll
+*.pyd
+
+/target/
+
+**/*.rs.bk
+
+benchmark/results/*
+.pytest_cache/*
+__pycache__/*
