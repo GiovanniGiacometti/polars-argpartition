@@ -85,3 +85,6 @@ shape: (3, 1)
 └─────┘
 ```
 
+## Disclaimer
+
+I'm pretty new to Rust, which means that the Rust code might be one of the worse you've ever seen. Feel free to open issues or PRs to improve it.
