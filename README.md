@@ -1,8 +1,8 @@
 # Polars argpartition
 
-[Polars plugin](https://docs.pola.rs/user-guide/plugins/expr_plugins/#writing-the-expression) that implements the [argpartition](https://numpy.org/doc/stable/reference/generated/numpy.argpartition.html) function in Rust.
+A [Polars plugin](https://docs.pola.rs/user-guide/plugins/expr_plugins/#writing-the-expression) that implements the [argpartition](https://numpy.org/doc/stable/reference/generated/numpy.argpartition.html) function in Rust.
 
-Under the hood, it uses the [`sort_unstable`](https://doc.rust-lang.org/std/primitive.slice.html#method.sort_unstable) method from the Rust standard library. You can refer to its documentation for more information.
+Under the hood, it uses the [`sort_unstable`](https://doc.rust-lang.org/std/primitive.slice.html#method.sort_unstable) method from the Rust standard library.
 
 ## Installation
 
@@ -85,6 +85,11 @@ shape: (3, 1)
 └─────┘
 ```
 
-## Disclaimer
+## Acknowledgments
+
+A huge thank you to [Marco Gorelli](https://github.com/MarcoGorelli) for his fantastic [Polars plugin tutorial](https://marcogorelli.github.io/polars-plugins-tutorial/), which served as the foundation for this project.
+
+## Contributing
 
 I'm pretty new to Rust, which means that the Rust code might be one of the worse you've ever seen. Feel free to open issues or PRs to improve it.
+
