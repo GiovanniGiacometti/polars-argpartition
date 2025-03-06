@@ -30,7 +30,7 @@ for column_data_type in column_data_types:
 
             # print("Executing Polars argpartition")
             start_ap = time.time()
-            idxs = df.with_columns(idxs=pl_ap.arg_partition(pl.col("a"), k=5))
+            idxs = df.with_columns(idxs=pl_ap.argpartition(pl.col("a"), k=5))
             # print(idxs)
             total_time_ap = time.time() - start_ap
             # print(f"Polars argpartition took {time.time() - start_ap:.2f} seconds")

@@ -21,7 +21,7 @@ def test_argpartition(data_type, n_rows):
 
     k = len(df) - 5
 
-    idxs = df.with_columns(idxs=pl_ap.arg_partition(pl.col("a"), k=k))
+    idxs = df.with_columns(idxs=pl_ap.argpartition(pl.col("a"), k=k))
 
     df_gathered = (
         idxs.with_row_index(name="row_index")

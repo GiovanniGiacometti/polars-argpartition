@@ -14,11 +14,31 @@ if TYPE_CHECKING:
 LIB = Path(__file__).parent
 
 
-def arg_partition(expr: IntoExprColumn, *, k: int) -> pl.Expr:
+def argpartition(expr: IntoExprColumn, *, k: int) -> pl.Expr:
+    """
+    Returns the indices that would partition the given column
+    such that the the element at index `k` is in
+    its final sorted position, all elements before are less or equal
+    and all elements after are greater or equal.
+    Note that the order of elements before and after `k` is arbitrary
+    and may change between runs.
+
+    Parameters
+    ----------
+    expr
+        The column to partition.
+    k
+        The index to partition by.
+
+    Returns
+    -------
+    Expr
+        Column of data type UInt32
+    """
     return register_plugin_function(
         args=[expr],
         plugin_path=LIB,
-        function_name="arg_partition",
+        function_name="argpartition",
         is_elementwise=True,
         kwargs={"k": k},
     )
