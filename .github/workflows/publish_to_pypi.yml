@@ -160,6 +160,7 @@ jobs:
         with:
           name: wheels-sdist
           path: dist
+          overwrite: true
 
   release:
     name: Release
