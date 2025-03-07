@@ -34,6 +34,7 @@ def argpartition(expr: IntoExprColumn, *, k: int) -> pl.Expr:
     -------
     Expr
         Column of data type UInt32
+
     """
     return register_plugin_function(
         args=[expr],
