@@ -2,7 +2,7 @@
 
 A [Polars plugin](https://docs.pola.rs/user-guide/plugins/expr_plugins/#writing-the-expression) that implements the [`argpartition`](https://numpy.org/doc/stable/reference/generated/numpy.argpartition.html) function in Rust.
 
-Under the hood, it uses the [`sort_unstable`](https://doc.rust-lang.org/std/primitive.slice.html#method.sort_unstable) method from the Rust standard library.
+Under the hood, it uses the [`select_nth_unstable`](https://doc.rust-lang.org/std/primitive.slice.html#method.select_nth_unstable) method from the Rust standard library.
 
 ## Installation
 
