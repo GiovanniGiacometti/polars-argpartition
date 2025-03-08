@@ -31,6 +31,8 @@ requirements:
 	uv export --no-hashes --no-editable --format requirements-txt > requirements.txt
 
 publish:
+	# before running this command, make sure you have the correct version in Cargo.toml
+	uv run maturin develop --release
 	git tag -a v$(VERSION_TAG) -m "Release v$(VERSION_TAG)"
 	git push origin v$(VERSION_TAG)
 
